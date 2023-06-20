@@ -2,8 +2,17 @@ package com.fmdevar.springboot.learnspringboot;
 
 public class Course {
     private long id;
-    private String title;
+    private String name;
     private String author;
+
+    public Course() {
+    }
+
+    public Course(long id, String name, String author) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+    }
 
     public long getId() {
         return id;
@@ -13,12 +22,12 @@ public class Course {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAuthor() {
@@ -29,9 +38,8 @@ public class Course {
         this.author = author;
     }
 
-    public Course(long id, String title, String author) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-    }
+   @Override
+    public String toString(){
+        return "[ "+ this.id + ", " + this.name+ ", "+ this.author     +" ]";
+   }
 }
