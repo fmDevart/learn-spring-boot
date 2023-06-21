@@ -1,4 +1,4 @@
-package com.fmdevar.springboot.learnspringboot;
+package com.fmdevar.springboot.learnspringboot.jdbc;
 
 public class Course {
     private long id;
